@@ -4,13 +4,16 @@ class ATM:
        self.cardNumber = c
        self.pinCode = p
        self.Balance = b
-       b = input("HOW MUCH YOU WANT IN YOUR ACCOUNT")
+   
 
     def showBalance(self)  :
         print(self.Balance)
 
-    def withdraw(self,a) :
-        a = input("THE AMOUNT YOU WANT TO WITHDRAW")
-        self.Balance - a   
+    def withdraw(self) :
+        a = int(input("THE AMOUNT YOU WANT TO WITHDRAW :"))
+        self.Balance = self.Balance - a   
+        print("BALANCE LEFT : ",self.Balance)
 
 bank = ATM(1234,333,1000)
+bank.showBalance()
+bank.withdraw()
